@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: sugdsmm-bot
+    env: python
+    buildCommand: |
+      pyenv install 3.11.9
+      pyenv global 3.11.9
+      pip install -r requirements.txt
+    startCommand: python main.py
+    plan: free
